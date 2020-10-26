@@ -22,6 +22,17 @@
         table{
           border-collapse:collapse;
         }
+
+        img {
+          border: 5px solid #555;
+        }
+
+        .centre{
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
     </style>
 
     <script src="jquery-3.5.1.min.js"></script>
@@ -49,65 +60,88 @@
 
         <p>For our individual assignment, we were tasked with converting the 2 PNG images below to gcode for the CNC machine to cut.</p>
 
-        <p>The image on the left is the outline of and the image on the right </p>
+        <p>The image on the left is the outline of board and the image on the right are the traces. By milling the traces followed by cutting the outline, we will get a PCB for the In-System Programming(ISP) board.</p>
 
-        <img src="IMAGES/EP/fts_mini_cut.png" width=37.5%>
+        <img src="IMAGES/EP/fts_mini_cut.png" width=45%>
 
-        <img src="IMAGES/EP/fts_mini_traces.png" width=37.5%>
+        <img src="IMAGES/EP/fts_mini_traces.png" width=45%>
 
         <h3>Generation of Gcode</h3>
 
-        <p>At the SP Fablab, there are 2 ways of </p>
+        <p>We first head to https://fabfoundation.github.io/mods, to convert our PNG to a .nc file.</p>
 
-        https://fabfoundation.github.io/mods/
+        <p>We arrive and right click anywhere on the page to get a menu, followed by clicking 'programs'.</p>
 
-        <p>Head to https://fabfoundation.github.io/mods , </p>
+        <img src="IMAGES/EP/mods1.png">
+
+        <p>This opens up another list from which we click on 'open program'.</p>
+
+        <img src="IMAGES/EP/mods2.png">
+
+        <p>We get a long list from which we scroll down and look for a bolded 'gcode' and we select 'mill 2D PCB'.</p>
+
+        <img src="IMAGES/EP/mods3.png">
+
+        <p>We then get a bunch of nodes which can be configured.</p>
+
+        <img src="IMAGES/EP/mods4.png" width=75%>
+
+        <h3>CNC parameters</h3>
+
+        <p>Here is a table showing the parameters we will be changing for both the traces and outline.</p>
+
+
+
+        <table width=75%>
+          
+          <tr style: text-align:centre>
+            <!--
+            <td></td>
+            <td>Tool Diameter</td>
+            <td>Offset</td>
+            <td>Cut Depth</td>
+            <td>Max Depth</td>
+            -->
+
+            <th></th>
+            <th>Tool Diameter</th>
+            <th>Offset</th>
+            <th>Cut Depth</th>
+            <th>Cut Depth</th>
+            
+
+          </tr>
+
+          <tr text>
+
+            <td>Traces</td>
+            <td>0.4mm</td>
+            <td>3-4</td>
+            <td>0.05</td>
+            <td>0.05</td>
+
+          </tr>
+
+          <tr>
+
+            <td>Outline</td>
+            <td>0.8mm</td>
+            <td>1</td>
+            <td>0.42</td>
+            <td>1.65</td>
+
+          </tr>
+
+        </table>
+        
+
+
 
         <p>Insert image here of the configured process</p>
 
         
 
-          <table width=75%>
           
-            <tr style: text-align:centre>
-              <!--
-              <td></td>
-              <td>Tool Diameter</td>
-              <td>Offset</td>
-              <td>Cut Depth</td>
-              <td>Max Depth</td>
-              -->
-
-              <th></th>
-              <th>Tool Diameter</th>
-              <th>Offset</th>
-              <th>Cut Depth</th>
-              <th>Cut Depth</th>
-              
-
-            </tr>
-
-            <tr text>
-
-              <td>Traces</td>
-              <td>0.4mm</td>
-              <td>3-4</td>
-              <td>0.05</td>
-              <td>0.05</td>
-
-            </tr>
-
-            <tr>
-
-              <td>Outline</td>
-              <td>0.8mm</td>
-              <td>1</td>
-              <td>0.42</td>
-              <td>1.65</td>
-
-            </tr>
-
-          </table>
 
         <p>Path to g code, 2mm/s plunge speed 2mm/s, jog speed 10, jog speed 2, </p>
 
