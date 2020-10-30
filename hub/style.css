@@ -1,24 +1,30 @@
-
-.menu {
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    background-color: darkturquoise;
-   }
-   
-   .menu li {
-    float: left;
-   }
-   
-   .menu li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-   }
-   
-   .menu li a:hover {
-    background-color: lightskyblue;
-   }
+    width: 25%;
+    height: 100%; /* Full height */
+    position: fixed; /* Make it stick, even on scroll */
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+    }
+
+
+    th,td{
+
+        text-align: center;
+        border: 1px solid;
+       
+      }
+      table{
+        border-collapse:collapse;
+      }
+
+      .border {
+        border: 5px solid #555;
+      }
+
+      .centre{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
