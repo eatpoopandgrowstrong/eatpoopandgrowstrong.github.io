@@ -111,6 +111,10 @@
 
         <h3>Generation of Gcode</h3>
 
+        <p>Using </p>
+
+
+
         <h1>REDO
 
         <p>We first head to https://fabfoundation.github.io/mods, to convert our PNG to a .nc file.</p>
@@ -163,13 +167,15 @@
 
         <p>Using https://ncviewer.com/, I was able to see the path of the drill bit.</p>
 
-        <p></p>
+        <p>In this case, since we're cutting the outline of the PCB, it will run 4 times. This is due to us cutting 0.4mm at a time and wanting our cut depth to be 1.6mm. Hence running 0.4mm deeper each time 4 times.</p>
 
-        <img src-"">
+        <img src="IMAGES/EP/ncviewer.png">
 
-        <p>Alternatively, using Camotics,  </p>
+        <p>Alternatively, using Camotics, we can also view the size of the board to ensure that our dimensions are correct.</p>
 
-        <img src="IMAGES/EP/camotics.png" class=border width=75%>
+        <img src="IMAGES/EP/camotics.png" class=border width=75%> 
+
+        <p>After checking that any copper tracks are excluded or missing, we are ready to mill the PCB.</p>
 
         <h3>Using the CNC machine to mill the PCB</h3>
 
