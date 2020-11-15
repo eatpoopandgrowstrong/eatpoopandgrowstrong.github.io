@@ -178,19 +178,27 @@
 
         <h2>Electric Rule Checking (ERC)</h2>
 
-        <img src="IMAGES/ED/ERC.png"  width=60%>
+        <img src="IMAGES/ED/ERC.png" class="border" width=60%>
 
-        <p>Before we convert our schematic to a PCB layout, we have to </p>
+        <p>Before we convert our schematic to a PCB layout, we have to use the ERC tool to check whether our schematic is  </p>
 
+        <img src="IMAGES/ED/ERCchecking.png" class="border" width=60%>
 
+        <p>As can be seen, there are no critical errors, only non-critical warnings about issues such as me not assigning values to my ATTiny45 board and S1, my switch which are alright with me.</p>
 
-        <p>The ERC tool can be used </p>
+        <p>Now that we have ensured there are no errors with our schematic, we can move onto our next step.</p>
 
         <h2>Converting schematic to PCB layout</h2>
 
         <p>We can convert our schematic to a PCB layout by:</p>
 
-        <img src="IMAGES/ED/convert.png"  width=60%>
+        <img src="IMAGES/ED/convert.png" class="border" width=60%>
+
+        <p>We are then greeted by this:</p>
+
+
+
+
 
 
         <h2>PCB layout</h2>
@@ -216,7 +224,7 @@
 
         <p>I will be using the second method, since I can't exactly get the pcb-gcode ULP window to open.</p>
 
-        <h3>Configuring the pcb-gcode ULP</h3>
+        <h2>Configuring the pcb-gcode ULP</h3>
 
         <p>Head to </p>
 
@@ -224,7 +232,22 @@
 
         <p>We use the built in export function in Eagle:</p>
 
-        <img src="IMAGES/ED/convert.png"  width=60%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <p>Remember to set the only layer in which you want to export as visible. For instance, when exporting the traces, set only the top layer as visibile and for the outline, only the milling layer as visible.</p>
 
@@ -258,12 +281,29 @@
 
         <p>After checking with ncviewer, we can now mill our PCB.</p>
 
-        <h2>Milling our PCB</h2>
+        <h2>Milling my first PCB</h2>
 
-        <p>Milling our </p>
+        <p>Milling the PCB is easy,  </p>
 
 
 
+
+        <h2>Rectifying my PCB outline</h2>
+
+        <p>In order to fix the issue</p>
+
+        <h2>Final Product</h2>
+
+        <img src="IMAGES/ED/final1.jpg" width=60%>
+
+        <img src="IMAGES/ED/final2.jpg" width=60%>
+
+        <img src="IMAGES/ED/final3.jpg" width=60%>
+
+        <img src="IMAGES/ED/final4.jpg" width=60%>
+
+
+        <h2>Soldering the components</h2>
 
 
 
