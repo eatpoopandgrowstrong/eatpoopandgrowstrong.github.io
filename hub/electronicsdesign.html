@@ -213,6 +213,10 @@
 
         <p>We can use the DRC tool to verify whether our PCB layout meets the </p>
 
+        <img src="IMAGES/ED/DRC1.png" width=60%>
+
+        <img src="IMAGES/ED/DRC2.png" width=60%>
+
 
         <h2>Converting our PCB layout in Eagle to a .nc or gcode file</h2>
 
@@ -249,9 +253,19 @@
 
 
 
-        <p>Remember to set the only layer in which you want to export as visible. For instance, when exporting the traces, set only the top layer as visibile and for the outline, only the milling layer as visible.</p>
+        <p>Remember to set the only layer in which you want to export as visible. For instance, when exporting the traces, set only the top layer as visible and for the outline, only the milling layer as visible.</p>
 
-        <p>We now have to fix our outline PNG. If we were to configure it in mods immediately, viewing its output in ncviewer, we get this:</p>
+        
+
+        <img src="IMAGES/ED/failexample.png" width=60%>
+
+        <p>If we were to configure it in mods immediately, viewing its output in ncviewer, we get this:</p>
+
+        <img src="IMAGES/ED/failedexamplencviewer.png" class="border" width=60%>
+
+        <p>As can be seen, the drill bit is cutting multiple times on </p>
+
+        <p>We now have to fix our outline PNG.</p>
 
         <p>In order to fix this, we can use either MS paint or GIMP. I used paint since its much lighter than GIMP and the task really doesn't require the many tools that GIMP has.</p>
 
@@ -260,6 +274,9 @@
         <p>Now we have the same shade of white selected, we can use the paint bucket to fill the exterior.</p>
 
         <p>Verifying it in ncviewer, we now have the appropriate cutting path of the outline of our PCB.</p>
+
+        <img src="IMAGES/ED/ncvieweroutline.png" class="border" width=60%>
+
 
         <p>Finally, we have our 2 PNGs of our traces and outline.</p>
 
@@ -292,15 +309,25 @@
 
         <p>In order to fix the issue</p>
 
-        <h2>Final Product</h2>
+        <h2>End copper board</h2>
+
+        <p>Here is my copper board after milling the traces. The cutting is pretty good, there are no burrs.</p>
 
         <img src="IMAGES/ED/final1.jpg" width=60%>
 
+        <p>Here is my copper board after milling the outline.</p>
+
         <img src="IMAGES/ED/final2.jpg" width=60%>
+
+        <p>After removal, I'm quite satisifed with it, there are no burrs on the copper tracks which eliminates me having to do any sanding to remove the burrs which could damage the copper tracks.</p>
 
         <img src="IMAGES/ED/final3.jpg" width=60%>
 
+        <p>Here is my completed bare board after removing the dead copper:</p>
+
         <img src="IMAGES/ED/final4.jpg" width=60%>
+
+        <p>I'm happy with how it turned out and the settings I used, I just need to solder on the SMT components now.</p>
 
 
         <h2>Soldering the components</h2>
