@@ -176,9 +176,11 @@
 
         <p>Now, current will flow into PB3 when the switch is not pressed, hence the input of PB3 being 'pulled up' to the high VCC voltage. When the button is pressed, current will instead flow through the resistor and instead of to PB3, go to the ground, hence PB3 receiving an input of low.</p>
 
-        <h2>ERC</h2>
+        <h2>Electric Rule Checking (ERC)</h2>
 
         <img src="IMAGES/ED/ERC.png"  width=60%>
+
+        <p>Before we convert our schematic to a PCB layout, we have to </p>
 
 
 
@@ -189,6 +191,83 @@
         <p>We can convert our schematic to a PCB layout by:</p>
 
         <img src="IMAGES/ED/convert.png"  width=60%>
+
+
+        <h2>PCB layout</h2>
+
+        <p>Now that we have our components on our PCB layout, we can now </p>
+
+        <h3>Laying out the solder   </h3>
+
+
+
+        <h2>Design Rule Checking</h2>
+
+        <p>We can use the DRC tool to verify whether our PCB layout meets the </p>
+
+
+        <h2>Converting our PCB layout in Eagle to a .nc or gcode file</h2>
+
+        <p>There are 2 ways of converting our PCB layout in Eagle to a .nc or gcode file.</p>
+
+        <p>First, there is the Eagle User Language Programme(ULP) which will immediately export a gcode file.</p>
+
+        <p>Second will be exporting a PNG through Eagle followed by using Mods to convert the PNG to a .nc file.</p>
+
+        <p>I will be using the second method, since I can't exactly get the pcb-gcode ULP window to open.</p>
+
+        <h3>Configuring the pcb-gcode ULP</h3>
+
+        <p>Head to </p>
+
+        <h3>Using Mods</h3>
+
+        <p>We use the built in export function in Eagle:</p>
+
+        <img src="IMAGES/ED/convert.png"  width=60%>
+
+        <p>Remember to set the only layer in which you want to export as visible. For instance, when exporting the traces, set only the top layer as visibile and for the outline, only the milling layer as visible.</p>
+
+        <p>We now have to fix our outline PNG. If we were to configure it in mods immediately, viewing its output in ncviewer, we get this:</p>
+
+        <p>In order to fix this, we can use either MS paint or GIMP. I used paint since its much lighter than GIMP and the task really doesn't require the many tools that GIMP has.</p>
+
+        <p>I simply use the eyedropper tool to select the color that is being used by the rectangle, in this case white.</p>
+
+        <p>Now we have the same shade of white selected, we can use the paint bucket to fill the exterior.</p>
+
+        <p>Verifying it in ncviewer, we now have the appropriate cutting path of the outline of our PCB.</p>
+
+        <p>Finally, we have our 2 PNGs of our traces and outline.</p>
+
+        <img src="IMAGES/ED/tracescharlie.png" class="border" width=40%>
+
+        <img src="IMAGES/ED/outlinecharlie.png" class="border" width=40%>
+
+        <p>Now we head to mods, where we configure the settings appropriately.</p>
+
+        <br>
+
+        <h2>Verifying our .nc file</h2>
+
+        <p>With ncviewer, I can view the path of the CNC when milling the board.</p>
+
+        <img src="IMAGES/ED/ncvieweroutline.png" class="border" width=40%>
+
+        <img src="IMAGES/ED/ncviewertraces.png" class="border" width=40%>
+
+        <p>After checking with ncviewer, we can now mill our PCB.</p>
+
+        <h2>Milling our PCB</h2>
+
+        <p>Milling our </p>
+
+
+
+
+
+
+
 
         <h4>Files Download</h4>
 
