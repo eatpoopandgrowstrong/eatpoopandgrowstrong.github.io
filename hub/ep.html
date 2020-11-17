@@ -169,42 +169,54 @@
 
         <h4>Prepping the PCB</h4>
 
-        <p>Before cutting, we need to first prepare the copper board for milling.</p>
+          <p>Before cutting, we need to first prepare the copper board for milling.</p>
 
-        <p>Using double sided tape to tape the non copper side of the board, I ensured that there were no overlaps between the tape as that would contribute to making the board not perfectly horizontal.</p>
+          <p>Using double sided tape to tape the non copper side of the board, I ensured that there were no overlaps between the tape as that would contribute to making the board not perfectly horizontal.</p>
 
-        <p>I wasn't really able to get many pictures during the process of the milling. However, I was able to get 2 pictures.</p>
+          <p>I wasn't really able to get many pictures during the process of the milling. However, I was able to get 2 pictures.</p>
 
-        <p>After loading our .nc file, I had to fit the drill bit to the CNC machine. I used a 0.1 mm 30 degree V-bit. After tightening the bit appropriately, I set the X and Y axis followed by callibrating the Z axis with the provided probe.</p>
+          <p>After loading our .nc file, I had to fit the drill bit to the CNC machine. I used a 0.1 mm 30 degree V-bit. After tightening the bit appropriately, I set the X and Y axis followed by callibrating the Z axis with the provided probe.</p>
 
-        <p>Here is an image of the CNC software whilst cutting my board outline. As can be seen, it is cutting at the depth of -1.67mm from the z axis.</p>
+          <p>Here is an image of the CNC software whilst cutting my board outline. As can be seen, it is cutting at the depth of -1.67mm from the z axis.</p>
 
-        <img src="IMAGES/EP/stepcraftpc.jpg" width=75%>
+          <img src="IMAGES/EP/stepcraftpc.jpg" width=75%>
 
-        <p>Here is an image of the drill whilst it was milling the outline.</p>
+          <p>Here is an image of the drill whilst it was milling the outline.</p>
 
-        <img src="IMAGES/EP/stepcraftmill.jpg" width=75%>
+          <img src="IMAGES/EP/stepcraftmill.jpg" width=75%>
 
 
-        <p>After removing it from the copper board we have our product:</p>
+          <p>After removing it from the copper board we have our product:</p>
 
-        <img src="IMAGES/EP/traces.jpg" width=75%>
+          <img src="IMAGES/EP/traces.jpg" width=75%>
 
-        <p>After removing the dead copper with a penknife we have our final product: </p>
- 
-        <img src="IMAGES/EP/tracesfinal.jpg" width=75%>
+          <p>After removing the dead copper with a penknife we have our final product: </p>
+  
+          <img src="IMAGES/EP/tracesfinal.jpg" width=75%>
 
-        <p>It looks a lot better now.</p>
+          <p>It looks a lot better now.</p>
 
         <h3>Soldering on the ISP components</h3>
 
+          <p>I first started by soldering on the TINY85 IC. Following that, I tested my IC pins with a multi-meter, ensuring that I had not shorted any pins together from my poor soldering. </p>
+
           <img src="IMAGES/EP/ISP1.jpg" width=75%>
+
+          <p>I then started on the shorter components such as the resistors and LEDs. I also soldered on my 0.1uF capacitor.</p>
 
           <img src="IMAGES/EP/ISP2.jpg" width=75%>
 
+          <p>I then soldered on my zener diodes, ensuring that their orientation/polarity were right.</p>
+
           <img src="IMAGES/EP/ISP3.jpg" width=75%>
 
+          <p>I finally added on my 49.9 ohm resitors to finish the board.</p>
+
           <img src="IMAGES/EP/ISP4.jpg" width=75%>
+
+          <p>The soldering is pretty poor, it's definitely not going to win any awards but it'll work. I checked all the connections with a DMM.</p>
+
+          <p>Moving forward, I'll have to short together the solder jumper.</p>
 
         <h4>Files</h4>
 
@@ -212,7 +224,8 @@
 
         <a href="FINALPRODUCTDOWNLOADS/fts_mini_traces.png (7).nc" download="traces.nc">Traces .nc file</a>
 
-
+        <a href="FINALPRODUCTDOWNLOADS/fts_mini_traces.png (7).nc" download="traces.nc">Traces .nc file</a>
+        
         <br>
 
         <br>
