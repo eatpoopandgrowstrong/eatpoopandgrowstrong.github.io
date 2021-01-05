@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <title>Bill of materials</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+    <script src="../jquery-3.5.1.min.js"></script>
+    
+</head>
+
+<body>
+
+    <div id="nav-placeholder">
+
+    </div>
+    
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("mpnav.html");
+    });
+    </script>
+
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+
+        <p>WIP bill of materials:</p>
+
+        <p>2x linear actuators/servos, main cost of project, maybe 50ish each on aliexpress for budget ones.</p>
+
+        <p>Wood for table top</p>
+
+        <p>ATMEGA328</p>
+
+        <p>Copper board for milling of custom board</p>
+
+        <p>12V or 24V power supply, depending on the voltage used for the servo motor</p>
+
+        <p>Mosfets or transistors for the microcontroller</p>
+
+        <p>Push buttons</p>
+
+        <p>LCD display</p>
+    
+        <p>Elbow grease</p>
+
+        <table width=75%>
+          
+            <tr style: text-align:centre>
+              <!--
+              <td></td>
+              <td>Tool Diameter</td>
+              <td>Offset</td>
+              <td>Cut Depth</td>
+              <td>Max Depth</td>
+              -->
+  
+              <th>Operation</th>
+              <th>Endmill Size</th>
+              <th>Cut Speed</th>
+              <th>Cut Depth</th>
+              <th>Total Depth</th>
+              <th>Offset</th>
+              
+  
+            </tr>
+  
+            <tr text>
+  
+              <td>Traces</td>
+              <td>0.4mm flat</td>
+              <td>50-60mm/min</td>
+              <td>0.04~0.05mm</td>
+              <td>0.04~0.05mm</td>
+              <td>2~4</td>
+  
+            </tr>
+  
+            <tr>
+  
+              <td>Traces</td>
+              <td>0.8mm flat</td>
+              <td>60~80mm/min</td>
+              <td>0.04~0.05mm</td>
+              <td>0.04mm~0.05mm</td>
+              <td>1~2</td>
+  
+            </tr>
+  
+            <tr>
+  
+              <td>Traces</td>
+              <td>0.1mm 30 deg V-bit</td>
+              <td>50~80mm/min</td>
+              <td>0.42~0.45mm</td>
+              <td>1.65~1.70mm</td>
+              <td>1</td>
+              
+            </tr>
+  
+            <tr>
+  
+              <td>Outline</td>
+              <td>0.8mm flat</td>
+              <td>50~80mm/min</td>
+              <td>0.42~0.45mm</td>
+              <td>1.65~1.70mm</td>
+              <td>1</td>
+  
+            </tr>
+            
+          </table>
+
+
+      </div>
+    
+</body>
