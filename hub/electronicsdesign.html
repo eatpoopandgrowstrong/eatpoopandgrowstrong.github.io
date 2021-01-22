@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+
 <head>
     <title>Electronics Design</title>
 
     <link rel="stylesheet" href="style.css">
 
     <script src="jquery-3.5.1.min.js"></script>
-    
+
 </head>
 
 <body>
@@ -13,11 +14,11 @@
     <div id="nav-placeholder">
 
     </div>
-    
+
     <script>
-    $(function(){
-      $("#nav-placeholder").load("nav.html");
-    });
+        $(function () {
+            $("#nav-placeholder").load("nav.html");
+        });
     </script>
 
     <div style="margin-left:25%;padding:1px 16px;height:1000px;">
@@ -25,176 +26,196 @@
 
         <h1>Electronics Design</h1>
 
-            <p>For electronics design we will be using the electronic design automation (EDA) software EAGLE.</p>
+        <p>For electronics design we will be using the electronic design automation (EDA) software EAGLE.</p>
 
-        
+
 
         <h2>Adding Libraries</h2>
 
-            <p>Before we can use the component symbols in a schematic, we first have to add their libraries.</p>
+        <p>Before we can use the component symbols in a schematic, we first have to add their libraries.</p>
 
-            <p>This is very much like Arduino Library addition and updating, simply download the library file followed by pasting it into the EAGLE library folder.</p>
+        <p>This is very much like Arduino Library addition and updating, simply download the library file followed by
+            pasting it into the EAGLE library folder.</p>
 
-            <p>First we head to https://gitlab.fabcloud.org/pub/libraries/electronics to download the file.</p>
+        <p>First we head to https://gitlab.fabcloud.org/pub/libraries/electronics to download the file.</p>
 
-            <img src="IMAGES/ED/library1.png" class="border" width=60%>
+        <img src="IMAGES/ED/library1.png" class="border" width=60%>
 
-            <p>We then click on the eagle folder to open it.</p>
+        <p>We then click on the eagle folder to open it.</p>
 
-            <img src="IMAGES/ED/library2.png" class="border" width=60%>
+        <img src="IMAGES/ED/library2.png" class="border" width=60%>
 
-            <p>We then click on 'fab.lr'.</p>
+        <p>We then click on 'fab.lr'.</p>
 
-            <img src="IMAGES/ED/library3.png" class="border" width=60%>
+        <img src="IMAGES/ED/library3.png" class="border" width=60%>
 
-            <p>We then click on the 'download' button in the top right to download it.</p>
+        <p>We then click on the 'download' button in the top right to download it.</p>
 
-            <img src="IMAGES/ED/library4.png" class="border" width=60%>
+        <img src="IMAGES/ED/library4.png" class="border" width=60%>
 
-            <p>We then use file explorer to find our Eagle Library folder. By default, it should be in the documents folder. We then open the 'EAGLE' folder.</p>
+        <p>We then use file explorer to find our Eagle Library folder. By default, it should be in the documents folder.
+            We then open the 'EAGLE' folder.</p>
 
-            <img src="IMAGES/ED/library5.png" class="border" width=60%>
+        <img src="IMAGES/ED/library5.png" class="border" width=60%>
 
-            <p>Click on 'libraries'.</p>
+        <p>Click on 'libraries'.</p>
 
-            <img src="IMAGES/ED/library6.png" class="border" width=60%>
+        <img src="IMAGES/ED/library6.png" class="border" width=60%>
 
-            <p>Then paste our 'eagle_fab.lbr' file here.</p>
+        <p>Then paste our 'eagle_fab.lbr' file here.</p>
 
-            <img src="IMAGES/ED/library7.png" class="border" width=60%>
+        <img src="IMAGES/ED/library7.png" class="border" width=60%>
 
-            <p>After pasting it, head over to the control panel and right click on the library, followed by clicking 'use'. Alternatively, we can also click on the grey circle.</p>
+        <p>After pasting it, head over to the control panel and right click on the library, followed by clicking 'use'.
+            Alternatively, we can also click on the grey circle.</p>
 
-            <p>A green light should now appear to indicate the library is 'in use'.</p>
+        <p>A green light should now appear to indicate the library is 'in use'.</p>
 
-            <img src="IMAGES/ED/eaglelibrary.png" width=60%>
+        <img src="IMAGES/ED/eaglelibrary.png" width=60%>
 
-            <p>Now that everything is configured, we are able to start creating our schematics.</p>
+        <p>Now that everything is configured, we are able to start creating our schematics.</p>
 
         <h2>Assignment</h2>
 
-            <p>For our assignment, we were supposed to refer to a schematic and reimplement it in Eagle, along with a pull-up resistor and LED. Below is the image of the original schematic.</p>
+        <p>For our assignment, we were supposed to refer to a schematic and reimplement it in Eagle, along with a
+            pull-up resistor and LED. Below is the image of the original schematic.</p>
 
-            <img src="IMAGES/ED/04_t45_hello-board.png" class="border" width=60%>
+        <img src="IMAGES/ED/04_t45_hello-board.png" class="border" width=60%>
 
-            <p>We first start by heading to the Eagle control panel and creating a new project.</p>
+        <p>We first start by heading to the Eagle control panel and creating a new project.</p>
 
-            <img src="IMAGES/ED/schematic1.png" class="border" width=60%>
+        <img src="IMAGES/ED/schematic1.png" class="border" width=60%>
 
-            <p>We then create a new schematic by right clicking on the project folder and clicking on 'new' into 'schematic'.</p>
+        <p>We then create a new schematic by right clicking on the project folder and clicking on 'new' into
+            'schematic'.</p>
 
-            <img src="IMAGES/ED/schematic2.png" class="border" width=60%>
+        <img src="IMAGES/ED/schematic2.png" class="border" width=60%>
 
-            <p>We then enter the schematic screen.</p>
+        <p>We then enter the schematic screen.</p>
 
-            <img src="IMAGES/ED/schematic3.png" class="border" width=60%>
+        <img src="IMAGES/ED/schematic3.png" class="border" width=60%>
 
-            <p>To start off, I hit Ctrl + S to save the schematic before I start, I will continue to use Ctrl + S throughout to save my work.</p>
+        <p>To start off, I hit Ctrl + S to save the schematic before I start, I will continue to use Ctrl + S throughout
+            to save my work.</p>
 
-            <p>Following that, I click on the grid icon to enable the grid. This will help when laying out the components. Either lines or dots can be used to form the grid but I prefer dots.</p>
+        <p>Following that, I click on the grid icon to enable the grid. This will help when laying out the components.
+            Either lines or dots can be used to form the grid but I prefer dots.</p>
 
-            <img src="IMAGES/ED/schematic4.png" class="border" width=40%>
+        <img src="IMAGES/ED/schematic4.png" class="border" width=40%>
 
-            <img src="IMAGES/ED/schematic5.png" class="border" width=40%>
+        <img src="IMAGES/ED/schematic5.png" class="border" width=40%>
 
-            <p>Now that we are done with setting up, we can start creating our schematic.</p>
+        <p>Now that we are done with setting up, we can start creating our schematic.</p>
 
-            <p>In order to add components to the schematic, we use 'add parts'. The shortcut for this is Ctrl Shift A. Alternatively, it can be accessed through 2 ways:</p>
+        <p>In order to add components to the schematic, we use 'add parts'. The shortcut for this is Ctrl Shift A.
+            Alternatively, it can be accessed through 2 ways:</p>
 
-            <img src="IMAGES/ED/schematic6.png" class="border" width=40%>
+        <img src="IMAGES/ED/schematic6.png" class="border" width=40%>
 
-            <img src="IMAGES/ED/schematic7.png" class="border" width=40%>
+        <img src="IMAGES/ED/schematic7.png" class="border" width=40%>
 
         <h3>Adding components</h3>
 
-            <img src="IMAGES/ED/schematic8.png" class="border" width=60%>
+        <img src="IMAGES/ED/schematic8.png" class="border" width=60%>
 
-            <p>This is the adding menu, here I have moved down to the Eagle Library by pressing E. Here, we can browse the library for the various components that we want.</p>
+        <p>This is the adding menu, here I have moved down to the Eagle Library by pressing E. Here, we can browse the
+            library for the various components that we want.</p>
 
-            <p>Furthermore, we can search for the various components that we want to save some time. I'll show this by adding a frame to our schematic.</p>
+        <p>Furthermore, we can search for the various components that we want to save some time. I'll show this by
+            adding a frame to our schematic.</p>
 
-            <p>We do so by searching for 'frame'. This searches for frames which we can use to encompass our schematic.</p>
+        <p>We do so by searching for 'frame'. This searches for frames which we can use to encompass our schematic.</p>
 
-            <img src="IMAGES/ED/schematic9.png" class="border" width=60%>
+        <img src="IMAGES/ED/schematic9.png" class="border" width=60%>
 
-            <p>After selecting an appropriate frame, simply drag it onto the grid.</p>
+        <p>After selecting an appropriate frame, simply drag it onto the grid.</p>
 
-            <img src="IMAGES/ED/schematic10.png" class="border" width=60%>
+        <img src="IMAGES/ED/schematic10.png" class="border" width=60%>
 
-            <p>Next up, I'll search for my ATtiny45 IC to show how to use wildcards in the search bar.</p>
+        <p>Next up, I'll search for my ATtiny45 IC to show how to use wildcards in the search bar.</p>
 
-            <p>By entering '*tiny45*' in the search bar, we make use of wildcards, this means that do we not need to enter the exact name of the component, hence why our ATtiny45 IC shows up.</p>
+        <p>By entering '*tiny45*' in the search bar, we make use of wildcards, this means that do we not need to enter
+            the exact name of the component, hence why our ATtiny45 IC shows up.</p>
 
-            <img src="IMAGES/ED/schematic11.png" class="border" width=60%>
+        <img src="IMAGES/ED/schematic11.png" class="border" width=60%>
 
-            <p>Again, drag and drop onto the desired position on the grid.</p>
+        <p>Again, drag and drop onto the desired position on the grid.</p>
 
-            <img src="IMAGES/ED/schematic12.png" class="border" width=60%>
-            
-            <p>Now we have our IC.</p>
+        <img src="IMAGES/ED/schematic12.png" class="border" width=60%>
 
-            <img src="IMAGES/ED/schematic13.png"  width=60%>
+        <p>Now we have our IC.</p>
 
-            <p>I then proceeded to search for the rest of the components such as the ISP header</p>
+        <img src="IMAGES/ED/schematic13.png" width=60%>
 
-            <img src="IMAGES/ED/schematic14.png"  width=60%>
+        <p>I then proceeded to search for the rest of the components such as the ISP header</p>
 
-            <p>Now that I have all my components I can start arranging them like in the schematic and wiring them up.</p>
+        <img src="IMAGES/ED/schematic14.png" width=60%>
 
-            <p>I have also added the LED, push button and additional resistor as the assignment requires.</p>
+        <p>Now that I have all my components I can start arranging them like in the schematic and wiring them up.</p>
 
-    
+        <p>I have also added the LED, push button and additional resistor as the assignment requires.</p>
+
+
         <h3>Wiring up the components</h3>
 
-            <img src="IMAGES/ED/schematic15.png"  width=60%>
+        <img src="IMAGES/ED/schematic15.png" width=60%>
 
-            <p>The shortcut for the wiring net is Alt N. I first begin by wiring up the easy components such as ground and VCC for ICs, refering to the original schematic as much as possible.</p>
+        <p>The shortcut for the wiring net is Alt N. I first begin by wiring up the easy components such as ground and
+            VCC for ICs, refering to the original schematic as much as possible.</p>
 
-            <img src="IMAGES/ED/schematic16.png"  width=60%>
+        <img src="IMAGES/ED/schematic16.png" width=60%>
 
-            <p>Now that I have wired everything according to the schematic and implemented the pull-up resistor for an input and an LED for its output, I can now finally add values to components such as resistors.</p>
-            
+        <p>Now that I have wired everything according to the schematic and implemented the pull-up resistor for an input
+            and an LED for its output, I can now finally add values to components such as resistors.</p>
+
         <h3>Adding components' values</h3>
 
-            <p>In order to add the values of our components to the schematic, we need to use the 'values' tool. It can be found on the toolbar on the left as seen below:</p>
+        <p>In order to add the values of our components to the schematic, we need to use the 'values' tool. It can be
+            found on the toolbar on the left as seen below:</p>
 
-            <img src="IMAGES/ED/schematic17.png"  width=60%>
+        <img src="IMAGES/ED/schematic17.png" width=60%>
 
-            <p>After selecting the value tool, simply click any components which require their values such as this pull-up resistor. I'll input 10k as 10k ohms should be sufficient for a pull-up resistor.</p>
+        <p>After selecting the value tool, simply click any components which require their values such as this pull-up
+            resistor. I'll input 10k as 10k ohms should be sufficient for a pull-up resistor.</p>
 
-            <img src="IMAGES/ED/schematic18.png"  width=60%>
+        <img src="IMAGES/ED/schematic18.png" width=60%>
 
-            <p>After labelling both resistors and the single capacitor we are done with our schematic.</p>
+        <p>After labelling both resistors and the single capacitor we are done with our schematic.</p>
 
-        <img src="IMAGES/ED/schematic19.png"  width=60%>
+        <img src="IMAGES/ED/schematic19.png" width=60%>
 
         <h3>Wrong pull-up resistor location</h3>
 
-            <p>After checking my final schematic, I realised that my pull-up resistor was incorrectly placed. It should be placed below the VCC instead of directly to the pin 2 of the ATtiny45. Below is the rectified schematic.</p>
+        <p>After checking my final schematic, I realised that my pull-up resistor was incorrectly placed. It should be
+            placed below the VCC instead of directly to the pin 2 of the ATtiny45. Below is the rectified schematic.</p>
 
-            <img src="IMAGES/ED/schematic20.png"  width=60%>
+        <img src="IMAGES/ED/schematic20.png" width=60%>
 
-            <p>Now, current will flow into PB3 when the switch is not pressed, hence the input of PB3 being 'pulled up' to the high VCC voltage. When the button is pressed, current will instead flow through the resistor and instead of to PB3, go to the ground, hence PB3 receiving an input of low.</p>
+        <p>Now, current will flow into PB3 when the switch is not pressed, hence the input of PB3 being 'pulled up' to
+            the high VCC voltage. When the button is pressed, current will instead flow through the resistor and instead
+            of to PB3, go to the ground, hence PB3 receiving an input of low.</p>
 
         <h2>Electric Rule Checking (ERC)</h2>
 
-            <img src="IMAGES/ED/ERC.png" class="border" width=60%>
+        <img src="IMAGES/ED/ERC.png" class="border" width=60%>
 
-            <p>Before we convert our schematic to a PCB layout, we have to use the ERC tool to check whether our schematic is  </p>
+        <p>Before we convert our schematic to a PCB layout, we have to use the ERC tool to check whether our schematic
+            is </p>
 
-            <img src="IMAGES/ED/ERCchecking.png" class="border" width=60%>
+        <img src="IMAGES/ED/ERCchecking.png" class="border" width=60%>
 
-            <p>As can be seen, there are no critical errors, only non-critical warnings about issues such as me not assigning values to my ATTiny45 board and S1, my switch which are alright with me.</p>
+        <p>As can be seen, there are no critical errors, only non-critical warnings about issues such as me not
+            assigning values to my ATTiny45 board and S1, my switch which are alright with me.</p>
 
-            <p>Now that we have ensured there are no errors with our schematic, we can move onto our next step.</p>
+        <p>Now that we have ensured there are no errors with our schematic, we can move onto our next step.</p>
 
         <h2>Converting schematic to PCB layout</h2>
 
-            <p>We can convert our schematic to a PCB layout by:</p>
+        <p>We can convert our schematic to a PCB layout by:</p>
 
-            <img src="IMAGES/ED/convert.png" class="border" width=60%>
+        <img src="IMAGES/ED/convert.png" class="border" width=60%>
 
-            <p>We are then greeted by this:</p>
+        <p>We are then greeted by this:</p>
 
 
 
@@ -203,36 +224,36 @@
 
         <h2>PCB layout</h2>
 
-            <p>Now that we have our components on our PCB layout, we can now </p>
+        <p>Now that we have our components on our PCB layout, we can now </p>
 
-        <h3>Laying out the solder   </h3>
+        <h3>Laying out the solder </h3>
 
 
 
         <h2>Design Rule Checking</h2>
 
-            <p>We can use the DRC tool to verify whether our PCB layout meets the </p>
+        <p>We can use the DRC tool to verify whether our PCB layout meets the </p>
 
-            <img src="IMAGES/ED/DRC1.png" width=60%>
+        <img src="IMAGES/ED/DRC1.png" width=60%>
 
-            <img src="IMAGES/ED/DRC2.png" width=60%>
+        <img src="IMAGES/ED/DRC2.png" width=60%>
 
 
         <h2>Converting our PCB layout in Eagle to a .nc or gcode file</h2>
 
-            <p>There are 2 ways of converting our PCB layout in Eagle to a .nc or gcode file.</p>
+        <p>There are 2 ways of converting our PCB layout in Eagle to a .nc or gcode file.</p>
 
-            <p>First, there is the Eagle User Language Programme(ULP) which will immediately export a gcode file.</p>
+        <p>First, there is the Eagle User Language Programme(ULP) which will immediately export a gcode file.</p>
 
-            <p>Second will be exporting a PNG through Eagle followed by using Mods to convert the PNG to a .nc file.</p>
+        <p>Second will be exporting a PNG through Eagle followed by using Mods to convert the PNG to a .nc file.</p>
 
-            <p>I will be using the second method, since I can't exactly get the pcb-gcode ULP window to open.</p>
+        <p>I will be using the second method, since I can't exactly get the pcb-gcode ULP window to open.</p>
 
         <h2>Configuring the pcb-gcode ULP</h3>
 
-            
 
-        <h3>Using Mods</h3>
+
+            <h3>Using Mods</h3>
 
             <p>We use the built in export function in Eagle:</p>
 
@@ -253,9 +274,10 @@
 
 
 
-            <p>Remember to set the only layer in which you want to export as visible. For instance, when exporting the traces, set only the top layer as visible and for the outline, only the milling layer as visible.</p>
+            <p>Remember to set the only layer in which you want to export as visible. For instance, when exporting the
+                traces, set only the top layer as visible and for the outline, only the milling layer as visible.</p>
 
-            
+
 
             <img src="IMAGES/ED/failexample.png" width=60%>
 
@@ -267,9 +289,11 @@
 
             <p>We now have to fix our outline PNG.</p>
 
-            <p>In order to fix this, we can use either MS paint or GIMP. I used paint since its much lighter than GIMP and the task really doesn't require the many tools that GIMP has.</p>
+            <p>In order to fix this, we can use either MS paint or GIMP. I used paint since its much lighter than GIMP
+                and the task really doesn't require the many tools that GIMP has.</p>
 
-            <p>I simply use the eyedropper tool to select the color that is being used by the rectangle, in this case white.</p>
+            <p>I simply use the eyedropper tool to select the color that is being used by the rectangle, in this case
+                white.</p>
 
             <p>Now we have the same shade of white selected, we can use the paint bucket to fill the exterior.</p>
 
@@ -286,9 +310,9 @@
 
             <p>Now we head to mods, where we configure the settings appropriately.</p>
 
-        <br>
+            <br>
 
-        <h2>Verifying our .nc file</h2>
+            <h2>Verifying our .nc file</h2>
 
             <p>With ncviewer, I can view the path of the CNC when milling the board.</p>
 
@@ -298,18 +322,18 @@
 
             <p>After checking with ncviewer, we can now mill our PCB.</p>
 
-        <h2>Milling my first PCB</h2>
+            <h2>Milling my first PCB</h2>
 
-            <p>Milling the PCB is easy,  </p>
-
-
+            <p>Milling the PCB is easy, </p>
 
 
-        <h2>Rectifying my PCB outline</h2>
+
+
+            <h2>Rectifying my PCB outline</h2>
 
             <p>In order to fix the issue</p>
 
-        <h2>End copper board</h2>
+            <h2>End copper board</h2>
 
             <p>Here is my copper board after milling the traces. The cutting is pretty good, there are no burrs.</p>
 
@@ -319,7 +343,8 @@
 
             <img src="IMAGES/ED/final2.jpg" width=60%>
 
-            <p>After removal, I'm quite satisifed with it, there are no burrs on the copper tracks which eliminates me having to do any sanding to remove the burrs which could damage the copper tracks.</p>
+            <p>After removal, I'm quite satisifed with it, there are no burrs on the copper tracks which eliminates me
+                having to do any sanding to remove the burrs which could damage the copper tracks.</p>
 
             <img src="IMAGES/ED/final3.jpg" width=60%>
 
@@ -327,51 +352,55 @@
 
             <img src="IMAGES/ED/final4.jpg" width=60%>
 
-            <p>I'm happy with how it turned out and the settings I used, I just need to solder on the SMT components now.</p>
+            <p>I'm happy with how it turned out and the settings I used, I just need to solder on the SMT components
+                now.</p>
 
 
-        <h2>Soldering the components</h2>
+            <h2>Soldering the components</h2>
 
-            <p>I first started by soldering on my IC followed by checking the pins with a DMM. I then soldered on my switch and capacitor</p>
+            <p>I first started by soldering on my IC followed by checking the pins with a DMM. I then soldered on my
+                switch and capacitor</p>
 
             <img src="IMAGES/ED/HELLO1.jpg" width=60%>
 
-            <p>I then soldered on the rest of my components. The soldering quality on this board is slightly better than the ISP board but still not great.</p>
+            <p>I then soldered on the rest of my components. The soldering quality on this board is slightly better than
+                the ISP board but still not great.</p>
 
             <img src="IMAGES/ED/HELLO2.jpg" width=60%>
 
-            
-
-        <h4>Files Download</h4>
-
-        <a href="FINALPRODUCTDOWNLOADS/ELECTRONICSDESIGN/assignment.sch" download="electronicsdesign.sch">Electronics design assignment.sch file</a>
 
 
-        <p>Export image of traces, export image of outline, 1000 dpi(minimum) monochrome</p>
+            <h4>Files Download</h4>
+
+            <a href="FINALPRODUCTDOWNLOADS/ELECTRONICSDESIGN/assignment.sch"
+                download="electronicsdesign.sch">Electronics design assignment.sch file</a>
 
 
-        <p></p>
+            <p>Export image of traces, export image of outline, 1000 dpi(minimum) monochrome</p>
 
-        <br>
 
-        <br>
+            <p></p>
 
-        <br>
+            <br>
 
-        <br>
+            <br>
 
-        <p>Notes:</p>
+            <br>
 
-        <p>ERC and DRC</p>
+            <br>
 
-        <p>ERC schematic, DRC is for board </p>
+            <p>Notes:</p>
 
-        <br>
+            <p>ERC and DRC</p>
 
-        <br>
+            <p>ERC schematic, DRC is for board </p>
 
-        
+            <br>
 
-    </div>    
-    
+            <br>
+
+
+
+    </div>
+
 </body>
