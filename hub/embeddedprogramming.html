@@ -110,7 +110,7 @@
 
       <p>Secondly, there is the board manager url method, copy the URL to the Arduino library manager and it will
         automatically install the library. Since method is simpler due to only requiring a copy and paste of a link and
-        a restart of the Arduino IDE, I will be using this method. The first method's documentation can be found in the
+        a restart of the Arduino IDE and clicking of buttons, I will be using this method. The first method's documentation can be found in the
         installation tab on SpenceKonde's repository.</p>
 
       <img src="IMAGES/EMBEDDEDPROGRAMMING/Arduinoconfigure.png" width=75%>
@@ -123,14 +123,22 @@
       <p>After restarting Arduino, we can now configure the settings for our Tiny85 board, such as the clock at which
         the Tiny85 is operating at, which Tiny chip we are using, etc</p>
 
+      <p>After restarting Arduino, we'll head to our library manager where we'll finish off the installation by searching for 'Tiny' which will cause SpenceKonde's library to pop up. Click on 'Install'</p>
+
+      <img src="IMAGES/EMBEDDEDPROGRAMMING/Arduinoconfigure3.png" width=75%>
+
+      <p>We can now select the Tiny25/45/85 as our board:</p>
+
+      <img src="IMAGES/EMBEDDEDPROGRAMMING/Arduinoconfigure4.png" width=75%>  
+
       <p>One important thing to note is not to select an external clock in the Arduino IDE unless you have an external
         clock connected to the microcontroller. This will cause the
         board to stop working as it will keep waiting for an external clock at its clock pin. </p>
 
-      <h3>Burning Bootloader</h3>
+      <h3>Burning the Bootloader</h3>
 
       <p>If we change the internal clock frequency that the board is operating at, we will have to go into Arduino and
-        'burn bootloader'. This is due to the fuses </p>
+        'burn bootloader'. This will change the fuses to the appropriate setting. </p>
 
       <h3>Uploading the .ino file to the target board</h3>
 
@@ -170,8 +178,9 @@
       <p>In this section of the datasheet, we can see that the Tiny25/45/85 microcontrollers are available in both
         PDIP/SOIC/TSSOP and QFN/MLF packages.</p>
 
-      <h3></h3>
+      <h3>2) </h3>
 
+      
 
       <h2>Programming our target board:</h2>
 
@@ -183,14 +192,15 @@
 
       <p>We will need to know the pinout to properly set-up our board.</p>
 
-      <p>We will also </p>
+      <p>From my schematic, I know that I have my switch connected to PB3 and LED connected to PB4.</p>
 
       <p>I wrote a simple blink program for my board:</p>
 
-      <p>Insert video here</p>
+      <p>Insert video of the the thing blinking here</p>
 
-      <p>As seen from the code, the LED lights up for half a second where it is HIGH, followed by another half a second
+      <p>As seen from the code, the LED lights up for half a second where it is the pin it is connected to is set to HIGH, followed by another half a second
         where it is LOW, hence it blinking.</p>
-
+  
+      <p></p>
 
   </div>
