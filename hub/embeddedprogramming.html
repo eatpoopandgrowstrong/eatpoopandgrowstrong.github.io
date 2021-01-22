@@ -55,7 +55,7 @@
     <p>After this, we will also need to download some files and install them in their appropriate directories.</p>
 
     <ul>
-  
+
       <li>AVR Toolchain</li>
       <li>AVR Dude</li>
       <li>GNU Make</li>
@@ -66,110 +66,131 @@
 
     <p>Once downloaded, we'll extract it and copy it to our C://ProgramFiles Folder</p>
 
-    <p>We will also need to update our PATH once we are done installing our files in our directories. Simply type 'PATH' into the windows search box: </p>
+    <p>We will also need to update our PATH once we are done installing our files in our directories. Simply type 'PATH'
+      into the windows search box: </p>
 
     <img src="IMAGES/EMBEDDEDPROGRAMMING/PATH.png" width=75%>
 
     <h2>Programming the ISP programmer
 
-    <img src="IMAGES/EMBEDDEDPROGRAMMING/GITBASH1.png" width=75%>
+      <img src="IMAGES/EMBEDDEDPROGRAMMING/GITBASH1.png" width=75%>
 
-    <img src="IMAGES/EMBEDDEDPROGRAMMING/part1.png" width=75%>
+      <img src="IMAGES/EMBEDDEDPROGRAMMING/part1.png" width=75%>
 
-    <img src="IMAGES/EMBEDDEDPROGRAMMING/part2.png" width=75%>
+      <img src="IMAGES/EMBEDDEDPROGRAMMING/part2.png" width=75%>
 
-    <img src="IMAGES/EMBEDDEDPROGRAMMING/part3.png" width=75%>
+      <img src="IMAGES/EMBEDDEDPROGRAMMING/part3.png" width=75%>
 
-    <img src="IMAGES/EMBEDDEDPROGRAMMING/part4.png" width=75%>
+      <img src="IMAGES/EMBEDDEDPROGRAMMING/part4.png" width=75%>
 
-    <img src="IMAGES/EMBEDDEDPROGRAMMING/part5.png" width=75%>
+      <img src="IMAGES/EMBEDDEDPROGRAMMING/part5.png" width=75%>
 
-    <img src="IMAGES/EMBEDDEDPROGRAMMING/part6.png" width=75%>
-
-
-
-
-    <img src="IMAGES/EMBEDDEDPROGRAMMING/partsomething.png" width=75%>
-
-    <p>I also changed the MCU to the attiny85 from the attiny45 since we have been given tiny85s instead of tiny45s.
-    </p>
+      <img src="IMAGES/EMBEDDEDPROGRAMMING/part6.png" width=75%>
 
 
 
 
-    <h2>Setting up the Arduino as an ISP programmer</h2>
+      <img src="IMAGES/EMBEDDEDPROGRAMMING/partsomething.png" width=75%>
 
-    <p>https://github.com/SpenceKonde/ATTinyCore</p>
-
-    <p>There are 2 ways to setting up the Arduino IDE to act as an ISP programmer for our TINY85 target board.</p>
-
-    <p>Firstly, there is the manual installation method. Download a package and extract it and copy it to the Arduino Library folder</p>
-
-    <p>Secondly, there is the board manager url method, copy the URL to the Arduino  and it will automatically install the library. Since I'm lazy I will be using this method.</p>
-
-    <img src="IMAGES/EMBEDDEDPROGRAMMING/Arduinoconfigure.png" width=75%>
-
-    <p>Simply copy "http://drazzy.com/package_drazzy.com_index.json" and paste it in the "Additional Boards Managers URLs" field.</p>
-
-    <p>Insert image here of new settings and properly configured.</p>
-
-    <p>After restarting Arduino, we can now </p>
-
-    <p>One important thing to note is not to use external clock unless you have an external clock connected to the microcontroller. This will cause the
-      board to stop working as it will keep waiting for an external clock at its clock pin. </p>
-
-    <h3>Burning Bootloader</h3>
-
-    <p>If we change the internal clock frequency that the board is operating at, we will have to go into Arduino and 'burn bootloader'. This is due to the fuses  </p>
-
-    <h3>Uploading the .ino file to the target board</h3>
-
-    <p>Since we are using an ISP programmer and a target board, uploading to the target board will be slightly different from a traditional Arduino Uno.</p>
-
-    <p>Instead of clicking the upload to board button at the top left of the IDE, we will have to </p>
-
-    <h2>Assignment</h2>
-
-    <p>For our assignment, we have been tasked with reading a datasheet and programming our target board to do stuff.
-    </p>
-    <p>Programming the board to do stuff, send a button press through serial monitor or something</p>
-
-    <h2>Reading a datasheet</h2>
-
-    <p>Since I have already built a Tiny85 board, I will use its datasheet here.</p>
-
-    <p>We first start by searching for 'Tiny85 datasheet' in our search engine of choice.</p>
-
-    <p>Insert image here of first search result</p>
-
-    <p>The first search result here is from microchip showing the tiny25,45 and 85 datasheets.</p>
-
-    <p>After clicking it, we get this:</p>
-
-    <p>insert image here of cover page of the datasheet</p>
+      <p>I also changed the MCU to the attiny85 from the attiny45 since we have been given tiny85s instead of tiny45s.
+      </p>
 
 
-    <h3>Feature/Summary page</h3>
-
-    <p>Here we can see a brief summary of the features of the Tiny25/45/85 family.</p>
-
-    <h3>1) Pin configuration:</h3>
-
-    <p>In this section of the datasheet, we can see that the Tiny25/45/85 microcontrollers are available in both
-      PDIP/SOIC/TSSOP and QFN/MLF packages.</p>
-
-    <h3></h3>
 
 
-    <h2>Programming our target board:</h2>
+      <h2>Setting up the Arduino as an ISP programmer</h2>
 
-    <p>Programming our target board with the Arduino as an ISP is almost the same as a regular Arduino Uno or Mega.</p>
+      <p>We'll be using SpenceKonde's ATTinyCore library which is hosted on github at:
+        https://github.com/SpenceKonde/ATTinyCore</p>
 
-    <p>Before programming our target board, we will first have to refer to the datasheet to understand the Pinout of the Tiny85.</p>
+      <p>There are 2 ways to setting up the Arduino IDE to act as an ISP programmer for our TINY85 target board.</p>
 
-    <p>We will need to know the pinout to properly set-up our board.</p>
+      <p>Firstly, there is the manual installation method. Download a package and extract it and copy it to the Arduino
+        Library folder</p>
 
-    <p>We will also </p>
+      <p>Secondly, there is the board manager url method, copy the URL to the Arduino library manager and it will
+        automatically install the library. Since method is simpler due to only requiring a copy and paste of a link and
+        a restart of the Arduino IDE, I will be using this method. The first method's documentation can be found in the
+        installation tab on SpenceKonde's repository.</p>
 
-    <p></p>
+      <img src="IMAGES/EMBEDDEDPROGRAMMING/Arduinoconfigure.png" width=75%>
+
+      <p>Simply copy "http://drazzy.com/package_drazzy.com_index.json" and paste it in the "Additional Boards Managers
+        URLs" field.</p>
+
+      <img src="IMAGES/EMBEDDEDPROGRAMMING/Arduinoconfigure2.png" width=75%>
+
+      <p>After restarting Arduino, we can now configure the settings for our Tiny85 board, such as the clock at which
+        the Tiny85 is operating at, which Tiny chip we are using, etc</p>
+
+      <p>One important thing to note is not to select an external clock in the Arduino IDE unless you have an external
+        clock connected to the microcontroller. This will cause the
+        board to stop working as it will keep waiting for an external clock at its clock pin. </p>
+
+      <h3>Burning Bootloader</h3>
+
+      <p>If we change the internal clock frequency that the board is operating at, we will have to go into Arduino and
+        'burn bootloader'. This is due to the fuses </p>
+
+      <h3>Uploading the .ino file to the target board</h3>
+
+      <p>Since we are using an ISP programmer and a target board, uploading to the target board will be slightly
+        different from a traditional Arduino Uno.</p>
+
+      <p>Instead of clicking the upload to board button at the top left of the IDE, we will have to go through "Tools"
+        and "Upload using programmer", as compared to a traditional Arduino Uno or Mega.</p>
+
+      <h2>Assignment</h2>
+
+      <p>For our assignment, we have been tasked with reading a datasheet and programming our target board to do stuff.
+      </p>
+      <p>Programming the board to do stuff, send a button press through serial monitor or something</p>
+
+      <h2>Reading a datasheet</h2>
+
+      <p>Since I have already built a Tiny85 board, I will use its datasheet here.</p>
+
+      <p>We first start by searching for 'Tiny85 datasheet' in our search engine of choice.</p>
+
+      <p>Insert image here of first search result</p>
+
+      <p>The first search result here is from microchip showing the tiny25,45 and 85 datasheets.</p>
+
+      <p>After clicking it, we get this:</p>
+
+      <p>insert image here of cover page of the datasheet</p>
+
+
+      <h3>Feature/Summary page</h3>
+
+      <p>Here we can see a brief summary of the features of the Tiny25/45/85 family.</p>
+
+      <h3>1) Pin configuration:</h3>
+
+      <p>In this section of the datasheet, we can see that the Tiny25/45/85 microcontrollers are available in both
+        PDIP/SOIC/TSSOP and QFN/MLF packages.</p>
+
+      <h3></h3>
+
+
+      <h2>Programming our target board:</h2>
+
+      <p>Programming our target board with the Arduino as an ISP is almost the same as a regular Arduino Uno or Mega.
+      </p>
+
+      <p>Before programming our target board, we will first have to refer to the datasheet to understand the Pinout of
+        the Tiny85.</p>
+
+      <p>We will need to know the pinout to properly set-up our board.</p>
+
+      <p>We will also </p>
+
+      <p>I wrote a simple blink program for my board:</p>
+
+      <p>Insert video here</p>
+
+      <p>As seen from the code, the LED lights up for half a second where it is HIGH, followed by another half a second
+        where it is LOW, hence it blinking.</p>
+
+
   </div>
